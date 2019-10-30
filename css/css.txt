@@ -1,0 +1,283 @@
+@import url(httpsfonts.googleapis.comcssfamily=Fira+Sans400,300,700,500,400italic,500italic,700italic,300italic);
+
+body{
+    background #2C3940;
+    overflowhidden;
+    font-family 'Fira Sans', sans-serif;
+    a{
+        colorwhite;
+        padding-top20px;
+        font-size10px;
+        opacity0.6;
+        positionrelative;
+        top10px;
+        transitionall .3s;
+        font-weight100;
+        text-decorationnone;
+        &hover{
+            opacity1;
+
+        }
+        i.l{
+            margin-right3px;
+        }
+    }
+}
+input{
+    displaynone;
+}
+
+inputchecked + label{
+    .button_inner{
+        backgroundtransparent;
+        transformrotate(90deg);
+        width100px;
+        border-radius100px;
+        box-shadow0px 0px 0px 440px rgba(0,0,0,0);
+        animation finalbox .4s 4.42s cubic-bezier(0.39, 2.01, 0.27, 0.75) forwards;
+        span.t{
+            opacity0;
+            top20px;
+        }
+    }
+    i.l{
+        left14px;
+        opacity1;
+        top11px;
+        animationdown 1s .25s infinite,final .2s 4s forwards;
+    }
+    .tick{
+        position absolute;
+        left 2px;
+        right 0;
+        transformscale(0) rotate(-90deg);
+        color #00C1FC;
+        top 11px;
+        margin auto;
+        font-size 22px;
+        animation tick .3s 4.7s forwards;
+    }
+    .button_spots{
+        opacity1;
+        @for $i from 0 through 60{
+            &nth-of-type(#{$i}){
+                top(16px - random(10)) - 0 !important;
+                left-34px  !important;
+                opacity0;
+                paddingrandom(20)4 + 2 + px !important;
+                animationspew 1s .3s forwards,rotate 4s + random(4)10 .25s + random(12)10 linear infinite ,final .2s 4s forwards,spot-#{$i} .7s .4random(10) + random(10)10 + 10s linear infinite !important;
+            }
+        }
+
+    }
+}
+.tick{
+    positionabsolute;
+    left-40;
+    right0;
+    transformscale(0);
+    marginauto;
+    font-size22px;
+}
+.button{
+    positionabsolute;
+    top50%;
+    left0;
+    right0;
+    marginauto;
+    text-alignCenter;
+    height360px;
+    width200px;
+    transformtranslateY(-50%);
+    h1{
+        font-weight100;
+        colorWhite;
+        font-size24px;
+        margin0;
+        text-transformuppercase;
+    }
+    h2{
+        font-weight100;
+        color#00C4FF;
+        opacity1;
+        font-size14px;
+        margin4px 0px 0px 0px;
+    }
+    .b_l_quad .button_spots{
+        @for $i from 1 through 20{
+            &nth-child(#{$i}){
+                paddingrandom(3) + 2 + px;
+                left -25 + ($i  12) + px;
+                top 50 + px;
+            }
+        }
+        @for $i from 20 through 40{
+            &nth-child(#{$i}){
+                paddingrandom(3) + 2 + px;
+                left -255 + ($i  12) + px;
+                top -12 + px;
+            }
+        }
+        @for $i from 40 through 46{
+            &nth-child(#{$i}){
+                paddingrandom(3) + 2 + px;
+                left 204px;
+                top -488 + ($i  12) + px;
+            }
+        }
+
+        @for $i from 46 through 52{
+            &nth-child(#{$i}){
+                paddingrandom(3) + 2 + px;
+                left -10px;
+                top -568 + ($i  12) + px;
+            }
+        }
+    }
+    .button_spots{
+        positionabsolute;
+        border-radius100px;
+        backgroundgreen;
+        opacity0;
+        animationopacity 1s;
+        @for $i from 1 through 52{
+            &nth-of-type(#{$i}){
+                transform-origin90px - random(10) 20px - random(10);
+                backgroundhsla(350 + random(399) ,57% - random(10) ,65%,1);
+                box-shadow0px 0px 10px rgba(255,255,255,0.12);
+                transitionall 1s + random(10)10;
+            }
+        }
+    }
+    &_inner{
+        overflowhidden;
+        border-radius2px;
+        positionabsolute;
+        width200px;
+        height50px;
+        left0;
+        right0;
+        top50%;
+        marginauto;
+        box-shadow 0px 0px 0px 0px rgba(0, 0, 0, 0.04);
+        font-weight 100;
+        font-size 12px;
+        cursorpointer;
+        border 2px solid #FFFFFF;
+        color white;
+        text-align Center;
+        transitionall .3s,box-shadow .2s,transform .2s .2s;
+        span.t{
+            positionrelative;
+            top6px;
+            opacity1;
+            left-10px;
+            transitionleft .4s .1s;
+
+
+        }
+        i.l{
+            position relative;
+            left -19px;
+            top 20px;
+            color #00C4FF;
+            font-size 25px;
+            opacity 0;
+            transition left .3s 0s,top .3s 0s,opacity .3s 0s;
+        }
+        &hover{
+            color#2C3940;
+            background white;
+            box-shadow 0px 17px 18px -14px rgba(0, 0, 0, 0.08);
+            span.t{
+                left16px;
+                transitionleft .4s;
+            }
+            i.l{
+                top12px;
+                opacity1;
+                transition left .3s 0s,top .3s .1s,opacity .3s .1s;
+            }
+        }
+        &hover .button_spots{
+            @for $i from 1 through 19{
+                &nth-of-type(#{$i}){
+                    animation spot-#{$i} .7s .4random(10) + random(10)10 + s linear infinite;
+                }
+            }
+            @for $i from 20 through 40{
+                &nth-of-type(#{$i}){
+                    animation spot-#{$i} .7s .4random(10) + random(10)10 + s linear infinite;
+                }
+            }
+            @for $i from 40 through 46{
+                &nth-of-type(#{$i}){
+                    animation spot-#{$i} .7s .4random(10) + random(10)10 + s linear infinite;
+                }
+            }
+            @for $i from 46 through 54{
+                &nth-of-type(#{$i}){
+                    animation spot-#{$i} .7s .4random(10) + random(10)10 + s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 20{
+    @keyframes spot-#{$i}{
+        from{opacity0;}
+        to{transformtranslateY(30px) translatex(-20px + $i2);opacity.6;}
+    }
+}
+@for $i from 20 through 40{
+    @keyframes spot-#{$i}{
+        from{opacity0;}
+        to{transformtranslateY(-30px) translatex(-50px + $i2);opacity.6;}
+    }
+}
+@for $i from 40 through 45{
+    @keyframes spot-#{$i}{
+        from{opacity0;}
+        to{transformtranslateY(-86px + $i2) translatex(40px);opacity.6;}
+    }
+}
+@for $i from 46 through 54{
+    @keyframes spot-#{$i}{
+        from{opacity0;}
+        to{transformtranslateY(-99px + $i2) translatex(-40px);opacity.6;}
+    }
+}
+
+@keyframes opacity{
+    from{}
+    to{opacity0;}
+}
+
+@keyframes rotate{
+    from{opacity.8}
+    to{transformrotate(360deg);opacity.8}
+}
+
+@keyframes down{
+    from{left10px;}
+    to{left57px;}
+}
+
+@keyframes spew{
+    from{opacity0;}
+    to{opacity0.8;}
+}
+
+@keyframes final{
+    from{opacity1;}
+    to{opacity0;}
+}
+@keyframes finalbox{
+    from{}
+    to{width50px;}
+}
+@keyframes tick{
+    from{}
+    to{transformscale(1) rotate(-90deg)}
+}
